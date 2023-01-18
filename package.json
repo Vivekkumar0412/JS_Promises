@@ -1,0 +1,15 @@
+{
+  "name": "promises",
+  "version": "1.0.0",
+  "description": "Promises in js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vivek",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "popups": "^1.1.3"
+  }
+}
