@@ -14,198 +14,198 @@
 
     <script>
 
-        // // created a promise p to check the results of resolved function
+        // created a promise p to check the results of resolved function
 
-        // let p = new Promise((res, rej) => {
-        //     setTimeout(() => {
-        //         res("i am fulfilled")
-        //         // reject(new Error("i am an erroe"))
-        //     }, 5000)
-        // });
-        // //used then methon p promise
-        // p.then((val)=>{
-        //     console.log(val);
-        // })
-
-
-        // // created a separate p2 promise to understant the funcanality of reject function in a better manner.
+        let p = new Promise((res, rej) => {
+            setTimeout(() => {
+                res("i am fulfilled")
+                // reject(new Error("i am an erroe"))
+            }, 5000)
+        });
+        //used then methon p promise
+        p.then((val)=>{
+            console.log(val);
+        })
 
 
-        // let p2 = new Promise((res,rej)=>{
-        //     rej("rejectctcucg")
-        // })
-
-        // // remember that catch is always used tto tack the rejected statement and then is always used to track the position of resolved statemnt
-        // p2.catch((val)=>{
-        //     console.log(val);
-        // })
+        // created a separate p2 promise to understant the funcanality of reject function in a better manner.
 
 
-        // console.log(p2)
-        // console.log(p);
-        // p.then((value) => {
-        //     console.log(value);
-        // })
+        let p2 = new Promise((res,rej)=>{
+            rej("rejectctcucg")
+        })
 
-        // let p1 = new Promise((res,rej)=>{
-        //     setTimeout(()=>{
-        //         res("I AM RESOLVED ")
-        //     },2000)
-        // })
-
-        // let p2 = new Promise((res,rej)=>{
-        //     setTimeout(()=>{
-        //         rej(new Error("rejected by vivek"))
-        //     },3000)
-        // })
-
-        // console.log(p1)
-        // console.log(p2)
-
-        // p1.then((val)=>{
-        //     console.log(val);
-        // })
-
-        // p2.then((val)=>{
-        //     console.log(val)
-        // },(err)=>{
-        //     console.log(err)
-        // })
-        // p2.catch((err)=>{
-        //     console.log(err);
-        // })
-
-        // let p3 = new Promise((res,rej)=>{
-        //     setTimeout(()=>{
-        //         // console.log();
-        //         res("promise p3")
-        //     },2000)
-        // });
-
-        // p3.then((val)=>{
-        //     console.log(val);
-
-        //     return new Promise((res,rej)=>{
-        //         setTimeout(()=>{
-        //             if(val =="ppromise p3"){
-        //                 res("p4 is resolved ")
-        //             }else{
-        //                 rej(new Error("p4 is rejected"))
-        //             }
-        //         },2000)
-        //     });
-
-        //     // return p4;
-        // }).then((val)=>{
-        //     console.log(val);
-        //     return new Promise((res,rej)=>{
-        //         setTimeout(()=>{
-        //             rej(new Error("p5 promise checking"))
-        //         },2000)
-        //     })
-        //     // return p5;
-        // }).then((val)=>{
-        //     console.log(val)
-        // }).catch((er)=>{
-        //     console.log(er)
-        // })
-
-        // p3.then((val)=>{
-        //     console.log(`this the value of promise "${val}" and i added this this is a separate handale`)
-        // })
-
-        // let p1 = new Promise((res,rej)=>{
-        //     setTimeout(()=>{
-        //         res("p1 is resolved ")
-        //     },2000)
-        // });
-
-        // let p2 = new Promise((res,rej)=>{
-        //     setTimeout(() => {
-        //         res("p2 is resolved ")
-        //     },3000);
-        // })
-
-        // let p3 = new Promise((res,rej)=>{
-        //     setTimeout(() => {
-        //         res("p3 is resolved ")
-        //     },4000);
-        // });
+        // remember that catch is always used tto tack the rejected statement and then is always used to track the position of resolved statemnt
+        p2.catch((val)=>{
+            console.log(val);
+        })
 
 
-        // p1.then((val)=>{
-        //     console.log(val)
-        // })
+        console.log(p2)
+        console.log(p);
+        p.then((value) => {
+            console.log(value);
+        })
 
-        // p2.then((val)=>{
-        //     console.log(val)
-        // })
+        let p1 = new Promise((res,rej)=>{
+            setTimeout(()=>{
+                res("I AM RESOLVED ")
+            },2000)
+        })
 
-        // p3.then((val)=>{
-        //     console.log(val)
-        // })
+        let p2 = new Promise((res,rej)=>{
+            setTimeout(()=>{
+                rej(new Error("rejected by vivek"))
+            },3000)
+        })
 
-        // let promise_all = Promise.all([p1,p2,p3])
-        // console.log(promise_all);
-        // promise_all.then((val)=>{
-        //     console.log(val);
-        // })
-        //     let x = 59;
-        // let p1 = new Promise((res,rej)=>{
-        //     if(x == 59){
-        //         res("I am resolved and i am p1")
-        //     }else{
-        //         rej("Rejected dew to some error")
-        //     }
-        // });
+        console.log(p1)
+        console.log(p2)
 
-        // let p2 = new Promise((res,rej)=>{
-        //     setTimeout(() => {
-        //         res("p2 is resolved ")
-        //     },3000);
-        // }).then((val)=>{
-        //     console.log(val)
-        //     p1.then((val)=>{
-        //     console.log(val);
-        //     return new Promise((res,rej)=>{
-        //         setTimeout(() => {
-        //             res("p2 is resolved ")
-        //         }, 1000);
-        //     });
-        // }).then((val)=>{
-        //     console.log(val);
-        //     return new Promise((res,rej)=>{
-        //         setTimeout(() => {
-        //             res("i ma an p3")
-        //         }, 1000);
-        //     })
-        // }).then((val)=>{
-        //     console.log(val)
-        //     window.alert(val)
-        //     // popup.alert({content:"hi"});
-        //     return new Promise((res,rej)=>{
-        //         setTimeout(() => {
-        //             res("i am final")
-        //         }, 1000);
-        //     })
-        // }).then((val)=>{
-        //     console.log(val);
-        // })
-        // .catch((err)=>{
-        //     console.log(err);
-        // })
-        // })
-        // setInterval(() => {
+        p1.then((val)=>{
+            console.log(val);
+        })
+
+        p2.then((val)=>{
+            console.log(val)
+        },(err)=>{
+            console.log(err)
+        })
+        p2.catch((err)=>{
+            console.log(err);
+        })
+
+        let p3 = new Promise((res,rej)=>{
+            setTimeout(()=>{
+                // console.log();
+                res("promise p3")
+            },2000)
+        });
+
+        p3.then((val)=>{
+            console.log(val);
+
+            return new Promise((res,rej)=>{
+                setTimeout(()=>{
+                    if(val =="ppromise p3"){
+                        res("p4 is resolved ")
+                    }else{
+                        rej(new Error("p4 is rejected"))
+                    }
+                },2000)
+            });
+
+            // return p4;
+        }).then((val)=>{
+            console.log(val);
+            return new Promise((res,rej)=>{
+                setTimeout(()=>{
+                    rej(new Error("p5 promise checking"))
+                },2000)
+            })
+            // return p5;
+        }).then((val)=>{
+            console.log(val)
+        }).catch((er)=>{
+            console.log(er)
+        })
+
+        p3.then((val)=>{
+            console.log(`this the value of promise "${val}" and i added this this is a separate handale`)
+        })
+
+        let p1 = new Promise((res,rej)=>{
+            setTimeout(()=>{
+                res("p1 is resolved ")
+            },2000)
+        });
+
+        let p2 = new Promise((res,rej)=>{
+            setTimeout(() => {
+                res("p2 is resolved ")
+            },3000);
+        })
+
+        let p3 = new Promise((res,rej)=>{
+            setTimeout(() => {
+                res("p3 is resolved ")
+            },4000);
+        });
 
 
-        //     new Promise((res, rej) => {
-        //         setTimeout(()=>{
-        //         res("vivek got a pakage of 14 lakh on 31st of jan 2023");
-        //         },2000)
-        //     }).then((data) => {
-        //         console.log(data);
-        //     })
-        // }, 2000);
+        p1.then((val)=>{
+            console.log(val)
+        })
+
+        p2.then((val)=>{
+            console.log(val)
+        })
+
+        p3.then((val)=>{
+            console.log(val)
+        })
+
+        let promise_all = Promise.all([p1,p2,p3])
+        console.log(promise_all);
+        promise_all.then((val)=>{
+            console.log(val);
+        })
+            let x = 59;
+        let p1 = new Promise((res,rej)=>{
+            if(x == 59){
+                res("I am resolved and i am p1")
+            }else{
+                rej("Rejected dew to some error")
+            }
+        });
+
+        let p2 = new Promise((res,rej)=>{
+            setTimeout(() => {
+                res("p2 is resolved ")
+            },3000);
+        }).then((val)=>{
+            console.log(val)
+            p1.then((val)=>{
+            console.log(val);
+            return new Promise((res,rej)=>{
+                setTimeout(() => {
+                    res("p2 is resolved ")
+                }, 1000);
+            });
+        }).then((val)=>{
+            console.log(val);
+            return new Promise((res,rej)=>{
+                setTimeout(() => {
+                    res("i ma an p3")
+                }, 1000);
+            })
+        }).then((val)=>{
+            console.log(val)
+            window.alert(val)
+            // popup.alert({content:"hi"});
+            return new Promise((res,rej)=>{
+                setTimeout(() => {
+                    res("i am final")
+                }, 1000);
+            })
+        }).then((val)=>{
+            console.log(val);
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+        })
+        setInterval(() => {
+
+
+            new Promise((res, rej) => {
+                setTimeout(()=>{
+                res("vivek got a pakage of 14 lakh on 31st of jan 2023");
+                },2000)
+            }).then((data) => {
+                console.log(data);
+            })
+        }, 2000);
 
         let p1 = new Promise((res,rej)=>{
             // setTimeout(() => {
