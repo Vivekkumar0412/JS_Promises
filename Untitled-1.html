@@ -1,15 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h"></h1>
+    <script>
+        
+        // async function myfun() {
+            
+        //         let p = new Promise((res,rej)=>{
+        //             setTimeout(() => {
+        //                 res("resolved in 2 sec");
+        //             }, 2000);
+        //         })
+            
+
+        //     document.getElementById("h").innerHTML = await p;
+        // };
+
+        // myfun();
+        // console.log(myfun());
+
+        let fun_all = ()=>{
+                let p1 = new Promise((res,rej)=>{
+                        setTimeout(() => {
+                               res("i am p1") 
+                        }, 2000);
+                });
+
+                let p2 = new Promise((res,rej)=>{
+                        setTimeout(() => {
+                               res(" iam p2"); 
+                        }, 4000);
+                });
+
+                let all = Promise.all([p1,p2]);
+                return all;
+
+        };
+
+        let display = async()=>{
+                let data = await fun_all();
+                // data.then((val)=>{
+                //         console.log(val);
+                // })
+                // console.log(data);
+                return data;
+        };
+        display();
+
+        display().then((val)=>{
+                console.log(val);
+        })
 
         
-        // let data = fetch("https://api.openweathermap.org/data/2.5/weather?q=seattle&appid=1c498ed436194996868104427e41f9e6");
 
-        // data.then((da)=>{
-        //     console.log(da)
-        //     // da.json();
-        //    return da.json(); 
-        //     //  return json.parse(da); 
-        // }).then((an)=>{
-        //     console.log(an)
-        //     console.log(an.main)
-        //     console.log(an.name)
+    </script>
+</body>
 
-        // })
+</html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -207,44 +207,65 @@
         //     })
         // }, 2000);
 
-        let p1 = new Promise((res,rej)=>{
+        let data = async ()=>{
+            let p1 = new Promise((res, rej) => {
             setTimeout(() => {
                 res("p1 is resolved ");
             }, 1000);
-        
-        }).then((val)=>{
-             console.log(val)
-         });
 
-        let p2 = new Promise((res,rej)=>{
+        });
+
+        let p2 = new Promise((res, rej) => {
             setTimeout(() => {
                 res("p2 is resolved ")
             }, 2000);
         });
 
-        let p3 = new Promise((res,rej)=>{
+        let p3 = new Promise((res, rej) => {
             setTimeout(() => {
-                rej(new Error("i am an error"))
+                res("i am an error");
             }, 3000);
         });
+        };
 
-        p1.then((val)=>{
-            console.log(val);
-        });
-        p2.then((val)=>{
-            console.log(val);
-        });
-        p3.then((val)=>{
-            console.log(val);
-        });
+        let p =  data();
+        console.log(p);
 
-        let promise_all = Promise.all([p1,p2,p3]);
+        // p1.then((val)=>{
+        //     console.log(val);
+        // });
+        // p2.then((val)=>{
+        //     console.log(val);
+        // });
+        // p3.then((val)=>{
+        //     console.log(val);
+        // });
 
-        promise_all.then((val)=>{
-            console.log(val);
-        });
+        // let promise_all = Promise.all([p1, p2, p3]);
+        // let settled_p = Promise.allSettled([p1, p2, p3]);
+
+
+        // promise_all.then((val) => {
+        //     console.log(val);
+        // }).catch((val) => {
+        //     console.log(val)
+        // });
+
+        // settled_p.then((val) => {
+        //     console.log(val);
+        // });
+
+        // async function fetchData() {
+        //     const response = await fetch('https://some-api.com/data');
+        //     const data = await response.json();
+        //     return data;
+        // }
+        // console.log(fetchData());
+
 
     </script>
 </body>
 
-</html>
+</html> -->
+
+<
