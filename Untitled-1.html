@@ -1,68 +1,56 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Memory check</title>
+        <style>
+                h1{
+                        color: red;
+                        text-align: center;
+                        /* margin: auto; */
+                        position: absolute;
+                        top: 40%;
+                        left: 12%;
+                        font-size: 50px;
+                }
+                body{
+                        background-color: black;
+                        position: relative;
+                        height: 100vh;
+                }
+        </style>
 </head>
-
 <body>
-    <h1 id="h"></h1>
-    <script>
-        
-        // async function myfun() {
-            
-        //         let p = new Promise((res,rej)=>{
-        //             setTimeout(() => {
-        //                 res("resolved in 2 sec");
-        //             }, 2000);
-        //         })
-            
-
-        //     document.getElementById("h").innerHTML = await p;
-        // };
-
-        // myfun();
-        // console.log(myfun());
-
-        let fun_all = ()=>{
+      <h1 id="h"></h1> 
+      
+      <script>
+        let pr = ()=>{
                 let p1 = new Promise((res,rej)=>{
-                        setTimeout(() => {
-                               res("i am p1") 
-                        }, 2000);
+                        setTimeout(()=>{
+                                res("Vivek Got placed at Amazon Seattle")
+                        },1000)
                 });
 
                 let p2 = new Promise((res,rej)=>{
                         setTimeout(() => {
-                               res(" iam p2"); 
-                        }, 4000);
-                });
+                               res(" with a pakage of 4000000"); 
+                        }, 1000);
+                })
 
-                let all = Promise.all([p1,p2]);
-                return all;
-
+                let p_all = Promise.all([p1,p2]);
+                return p_all;
         };
 
         let display = async()=>{
-                let data = await fun_all();
-                document.getElementById("h").innerHTML = await fun_all();
-                // data.then((val)=>{
-                //         console.log(val);
-                // })
-                // console.log(data);
-                return data;
+                document.getElementById("h").innerHTML = await pr();
+                console.log(await pr());
         };
+
         display();
-
-        display().then((val)=>{
-                console.log(val);
-        })
-
-        
-
-    </script>
+      </script>
 </body>
-
 </html>
